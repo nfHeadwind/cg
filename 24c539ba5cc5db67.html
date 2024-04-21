@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+	<meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+	<title>恭喜！</title>
+  </head>
+  <body>	
+	<h1>是的，你成功了！</h1>
+	<p>祝贺你，完成了本轮游戏的所有挑战，给你分享一下我的司令部:https://www.jb51.net/</p> 
+ <p>记得常来访问啊！</p>
+ <p>我知道你在哪？你的IP地址是：<p>
+<p id="ip-address"></p>
+
+<script>
+fetch('https://api.ipify.org?format=json')
+  .then(response => response.json())
+  .then(data => {
+    document.getElementById('ip-address').textContent = data.ip;
+  })
+  .catch(error => {
+    console.error('Error:', error);
+  });
+</script>
+<p>我们交个朋友吧！我的微信号: Lion_81192</p>
+<p>不见不散！</p>
+  </body>
+</html>
